@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <title>Kishore K — Portfolio</title>
+  
+</head>
+<body>
+  <!-- Header / Nav -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+
+      <img src="img.png">
+      <a class="brand" href="#home">Kishore K</a>
+      <button id="navToggle" class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="siteNav" class="nav">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#certs" class="nav-link">Certifications</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="carrer.html" class="cta">Career Objective</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <p class="eyebrow">Front End Developer</p>
+        <h1>Hi, I’m <span class="accent">Kishore.K</span></h1>
+        <p class="lead">
+          I build practical IoT and embedded solutions and enjoy turning ideas into working prototypes.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn">View Projects</a>
+          <a href="#contact" class="btn btn-ghost">Contact Me</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <img src="img.jpg" flex-wrap="wrap" alt="Kishore portrait placeholder" />
+        <ul class="quick-info">
+          <li><strong>Degree:</strong> B.E., Electronics Communication Engineering<br>(2021–2025)</li>
+          <li><strong>College:</strong> Dhirajlal Gandhi College of Technology</li>
+          <li><strong>CGPA:</strong> 8.23</li>
+          <li><strong>Location:</strong> Salem-636453, Tamil Nadu, India</li>      
+          </ul>
+          </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container">
+        <h2>About</h2>
+        <p>
+        I’m a dedicated ECE student focused on problem-solving and innovation across embedded systems,
+        IoT, and web fundamentals. I’ve built safety and communication projects using sensors, Arduino, and LoRa.
+        I enjoy collaborating in teams, learning fast, and delivering clean, working solutions.
+      </p>
+
+      <div class="cards-3">
+        <div class="card">
+          <h3>Soft Skills</h3>
+          <ul class="taglist">
+            <li>Self-Learner</li><li>Teamwork</li><li>Time Management</li><li>Problem Solving</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Education</h3>
+          <p><strong>2021-2025</strong> — B.E., ECE, Dhirajlal Gandhi College Technology., CGPA = 8.23., Percentage = 80%</p>
+          <p><strong>2020-2021</strong> — HSC., SRV Matric Hr Sec School., Percentage = 85.6%</p>
+          <p><strong>2018-2019</strong> — SSLC., SRV Matric Hr Sec School., Percentage = 77.8%</p>
+        </div>
+        <div class="card">
+          <h3>Languages</h3>
+          <ul class="taglist">
+            <li>Tamil</li><li>English</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section alt">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="cards-2">
+        <article class="project">
+          <div class="project-body">
+            <h3>LPG Gas Leakage Detector System</h3>
+            <p>
+              Built with a smoke sensor to detect flammable gases and trigger alerts using a buzzer/alarm
+              when thresholds are exceeded — reducing fire/explosion risk.
+            </p>
+            <ul class="bullets">
+              <li>Sensor integration & threshold logic</li>
+              <li>Real-time alerting</li>
+              <li>Safety-first design</li>
+            </ul>
+          </div>
+          <div class="project-side">
+            <span class="pill">Arduino</span>
+            <span class="pill">Gas Sensor, Smoke Sensor</span>
+            <span class="pill">GSM Module</span>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-body">
+            <h3>Communication in Black Spots using LoRa</h3>
+            <p>
+              Long-range, low-power communication for remote areas without cellular coverage.
+              Decentralized data transmission for use-cases like agriculture and disaster response.
+            </p>
+            <ul class="bullets">
+              <li>LoRa Devices & Gateways</li>
+              <li>Unlicensed Frequency Bands</li>
+              <li>Tracking System</li>
+            </ul>
+          </div>
+          <div class="project-side">
+            <span class="pill">LoRa</span>
+            <span class="pill">GSM Module</span>
+            <span class="pill">Sensors</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section">
+    <div class="container">
+      <h2>Technical Skills</h2>
+      <ul class="skill-grid">
+        <li><span>HTML</span><div class="bar"><i style="width: 90%"></i></div></li>
+        <li><span>CSS</span><div class="bar"><i style="width: 90%"></i></div></li>
+        <li><span>JavaScript</span><div class="bar"><i style="width: 70%"></i></div></li>
+        <li><span>React JS</span><div class="bar"><i style="width: 60%"></i></div></li>
+        <li><span>Python</span><div class="bar"><i style="width: 65%"></i></div></li>
+        <li><span>Java (Basic)</span><div class="bar"><i style="width: 55%"></i></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section id="certs" class="section alt">
+    <div class="container">
+      <h2>Webinars, Certifications & Workshops</h2>
+      <div class="timeline">
+        <div class="t-item"><strong>Full Stack Development — TechForge, Salem</strong><span>Sep–Oct 2024</span></div>
+        <div class="t-item"><strong>AI Basics — Novitech, Coimbatore</strong><span>Jun–Jul 2025</span></div>
+        <div class="t-item"><strong>IoT using Arduino — Dhirajlal Gandhi College Technology</strong><span>Jan–Feb 2023</span></div>
+        <div class="t-item"><strong>Problem Solving Through Programming — Dhirajlal Gandhi College Technology</strong><span>Jan–Feb 2024</span></div>
+        <div class="t-item"><strong>Workshop: Neuro Forge — National Institute of Technology, Trichy</strong><span>Feb 2024</span></div>
+        <div class="t-item"><strong>National Conference: LoRa Communication</strong><span>Apr 2025</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact</h2>
+      <div class="contact-grid">
+        <div>
+          <p><strong>Phone:</strong> <a href="tel:+919600825271">+91 9600825271</a></p>
+          <p><strong>Email:</strong> <a href="mailto:Kannan.v4704@gmail.com">kannan.v4704@gmail.com</a></p>
+          <p><strong><a href="https://maps.app.goo.gl/e6LhbHvr332iZWx17">Address:</strong> Salem, Tamil Nadu — 636453</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="y"></span> Kishore.K</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
