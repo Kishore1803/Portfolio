@@ -114,7 +114,6 @@ a:hover{
   align-items:start;
   height: auto;
   z-index: 1000;
-  overflow: hidden;
 }
 
 .nav a{
