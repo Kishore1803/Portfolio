@@ -33,7 +33,6 @@ html{
 
 .btn-primary:hover{
   color: black;
-  background: yellow;
   outline:none;
   border:none;
 }
