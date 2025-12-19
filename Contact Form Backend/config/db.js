@@ -1,24 +1,13 @@
-const sql = require("mssql");
-
-const config = {
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  server: process.env.DB_SERVER,
-  database: process.env.DB_DATABASE,
-  port: Number(process.env.DB_PORT),
-  options: {
-    encrypt: false, // true for Azure
-    trustServerCertificate: true
-  }
-};
+const mongoose = require("mongoose");
 
 const connectDB = async () => {
   try {
-    await sql.connect(config);
-    console.log("SQL Server Connected");
+    await mongoose.connect(process.env.MONGO_URI);
+    console.log("MongoDB Connected");
   } catch (error) {
-    console.error("SQL Server Connection Failed:", error);
+    console.error("MongoDB Error:", error.message);
+    process.exit(1);
   }
 };
 
-module.exports = { sql, connectDB };
+module.exports = connectDB;
