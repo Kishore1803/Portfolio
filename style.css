@@ -38,7 +38,7 @@ html {
 .txt {
   resize: none !important;
 }
-
+/* 
 @media (max-width: 480px) {
   .circle {
     width: 250px;
@@ -55,4 +55,4 @@ html {
     width: 300px;
     height: 200px;
   }
-}
+} */
