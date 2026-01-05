@@ -24,10 +24,9 @@ html {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  width: 600px;
-  height: 500px;
+  width: 550px;
+  height: 300px;
   margin: 50px auto 0;
-  border-radius: 40px;
 }
 
 .info a {
@@ -38,21 +37,9 @@ html {
 .txt {
   resize: none !important;
 }
-/* 
+
 @media (max-width: 480px) {
-  .circle {
-    width: 250px;
-    height: 220px;
-    margin: 0 auto;
-  }
-
-  .img img {
-    width: 300px;
-    margin: 10px auto;
-  }
-
   .cert {
-    width: 300px;
-    height: 200px;
+    height: 250px;
   }
-} */
+}
