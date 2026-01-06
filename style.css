@@ -7,6 +7,7 @@
 body {
   padding-top: 40px;
   font-family: 'Poppins', sans-serif;
+  background-color: black;
 }
 
 html {
@@ -25,7 +26,7 @@ html {
   align-items: center;
   flex-wrap: wrap;
   width: 550px;
-  height: 300px;
+  height: 400px;
   margin: 50px auto 0;
 }
 
