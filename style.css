@@ -1,18 +1,23 @@
 * {
   margin: 0;
   padding: 0;
+  line-height: 1.5;
   box-sizing: border-box;
+  max-width: 100%;
 }
 
 body {
   padding-top: 40px;
-  font-family: 'Poppins', sans-serif;
-  background-color: black;
+  font-family: 'Montserrat', sans-serif; 
 }
 
 html {
   scroll-behavior: smooth;
   scrollbar-width: none;
+}
+
+.about{
+  text-align: justify !important;
 }
 
 .nav-link:hover {
@@ -39,12 +44,12 @@ html {
   resize: none !important;
 }
 
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
   .cert {
     height: 250px;
   }
   .about {
     font-size: 16px !important;
-    text-align: center;
+    text-align: justify !important;
   }
 }
