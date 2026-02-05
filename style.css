@@ -43,4 +43,8 @@ html {
   .cert {
     height: 250px;
   }
+  .about {
+    font-size: 16px !important;
+    text-align: center;
+  }
 }
