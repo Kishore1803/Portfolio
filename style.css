@@ -19,10 +19,6 @@ html {
   scrollbar-width: none;
 }
 
-.about{
-  text-align: justify !important;
-}
-
 .nav-link:hover {
   color: #fff;
   text-decoration: underline;
@@ -51,7 +47,7 @@ html {
   .cert {
     height: 250px;
   }
-  .about {
+  .about-page {
     font-size: 16px !important;
     text-align: justify !important;
   }
