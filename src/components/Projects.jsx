@@ -6,7 +6,7 @@ const projects = [
     number: "01",
     title: "Communication in Black Spot using LoRa Technology",
     category: "Academic Project",
-    image: "src/assets/spots.jpg",
+    image: "/Projects/spots.jpg",
     points: [
       "Designed a communication system for network dead zones.",
       "Used LoRa technology for long-range communication.",
@@ -19,7 +19,7 @@ const projects = [
     number: "02",
     title: "DM Health & Wealth",
     category: "Web Application",
-    image: "src/assets/dm.png",
+    image: "/Projects/dm.png",
     points: [
       "Built responsive websites for health and financial services.",
       "Designed modern layouts with easy navigation.",
@@ -34,7 +34,7 @@ const projects = [
     number: "03",
     title: "Make My Tour",
     category: "Travel Booking Platform",
-    image: "src/assets/makemytour.png",
+    image: "/Projects/makemytour.png",
     points: [
       "Developed a travel booking platform for flights and hotels.",
       "Implemented dynamic pricing, price history, and price freeze.",
@@ -49,7 +49,7 @@ const projects = [
     number: "04",
     title: "Elite Ice Creams",
     category: "Web Application",
-    image: "src/assets/icecream.png",
+    image: "/Projects/icecream.png",
     points: [
       "Developed a responsive website for an ice cream business.",
       "Created an attractive product interface with easy navigation.",
@@ -64,7 +64,7 @@ const projects = [
     number: "05",
     title: "Click Crafty",
     category: "Web Application",
-    image: "src/assets/click.png",
+    image: "/Projects/click.png",
     points: [
       "Built a platform for downloading high-quality illustrations.",
       "Created a clean and user-friendly interface.",
@@ -86,7 +86,7 @@ const projects = [
     number: "06",
     title: "Todo List Application",
     category: "Frontend Project",
-    image: "src/assets/Todo.png",
+    image: "/Projects/Todo.png",
     points: [
       "Created a simple task management application.",
       "Implemented add and delete task functionality.",
