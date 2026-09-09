@@ -7,3 +7,17 @@ body {
     padding: 0;
     font-family: "Manrope", sans-serif;
 }
+
+@media (max-width: 768px) {
+    body {
+        background-color: black;
+        width: fit-content;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        background-color: black;
+        width: 97%;
+    }
+}
