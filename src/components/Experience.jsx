@@ -4,6 +4,19 @@ import { motion } from "motion/react";
 const experiences = [
   {
     number: "01",
+    role: "Full Stack Developer Intern",
+    company: "Elevance Skills",
+    location: "Remote",
+    duration: "Jul 2026 - Present",
+    points: [
+      "Developed responsive web applications using HTML, CSS, Bootstrap, JavaScript, React.js, Spring Boot, and MySQL.",
+      "Designed and integrated RESTful APIs to enable seamless communication between frontend and backend applications.",
+      "Built reusable UI components and implemented CRUD operations following the Controller–Service–Repository architecture.",
+      "Collaborated with the development team using Git and GitHub, while testing, debugging, and optimizing application performance.",
+    ],
+  },
+  {
+    number: "02",
     role: "Front End Developer Intern",
     company: "Six Sigma Solutions",
     location: "Salem",
@@ -15,18 +28,17 @@ const experiences = [
       "Improved UI performance and ensured cross-browser compatibility.",
     ],
   },
-
-  {
-    number: "02",
-    role: "Full Stack Developer Intern",
-    company: "Elevance Skills",
-    location: "Remote",
-    duration: "Jul 2026 - Present",
+    {
+    number: "03",
+    role: "Graduate Engineering Trainee",
+    company: "Mobase Electronics",
+    location: "On-site",
+    duration: "April 2025 - May 2025",
     points: [
-      "Developed responsive web applications using HTML, CSS, Bootstrap, JavaScript, React.js, Spring Boot, and MySQL.",
-      "Designed and integrated RESTful APIs to enable seamless communication between frontend and backend applications.",
-      "Built reusable UI components and implemented CRUD operations following the Controller–Service–Repository architecture.",
-      "Collaborated with the development team using Git and GitHub, while testing, debugging, and optimizing application performance.",
+      "Gained practical exposure to electronics manufacturing processes and production operations.",
+      "Assisted with process monitoring, quality control, and adherence to manufacturing standards.",
+      "Collaborated with cross-functional teams to understand manufacturing workflows and operational procedures.",
+      "Developed knowledge of continuous improvement practices, workplace safety, and quality standards.",
     ],
   },
 ];
