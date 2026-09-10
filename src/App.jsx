@@ -9,46 +9,21 @@ import Education from "./components/Education";
 import Certifications from "./components/Certifications";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import "./App.jsx";
 
 function App() {
   return (
     <>
       <Navbar />
-
       <Home />
-
-      <section id="About">
-        <About />
-      </section>
-
-      <section id="Skill">
-        <Skills />
-      </section>
-
-      <section id="Experience">
-        <Experience />
-      </section>
-
-      <section id="Experience">
-        <Training />
-      </section>
-
-      <section id="Projects">
-        <Projects />
-      </section>
-
-      <section id="Education">
-        <Education />
-      </section>
-
-      <section id="Certifications">
-        <Certifications />
-      </section>
-
-      <section id="Contact">
-        <Contact />
-      </section>
-
+      <About />
+      <Skills />
+      <Experience />
+      <Training />
+      <Projects />
+      <Education />
+      <Certifications />
+      <Contact />
       <Footer />
     </>
   );
