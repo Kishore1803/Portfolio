@@ -109,7 +109,6 @@ function Experience() {
                     | {experience.location}
                   </span>
                 </p>
-
                 <small className="text-secondary">{experience.duration}</small>
               </div>
 
