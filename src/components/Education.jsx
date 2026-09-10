@@ -24,7 +24,7 @@ const education = [
     fullTitle: "HSC / 12th",
     institution: "SRV Matric Hr Sec School",
     duration: "2020 - 2021",
-    result: "85.6%",
+    result: "Percentage: 85.6%",
   },
   {
     number: "04",
@@ -32,7 +32,7 @@ const education = [
     fullTitle: "SSLC / 10th",
     institution: "SRV Matric Hr Sec School",
     duration: "2018 - 2019",
-    result: "77.8%",
+    result: "Percentage: 77.8%",
   },
 ];
 
