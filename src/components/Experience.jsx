@@ -113,7 +113,6 @@ function Experience() {
                 <small className="text-secondary">{experience.duration}</small>
               </div>
 
-              {/* Responsibilities */}
               <div className="col-lg-7">
                 <ul
                   className="ps-3 mb-0 text-secondary"
