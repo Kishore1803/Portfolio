@@ -83,10 +83,13 @@ function Training() {
                 <span className="text-secondary"> | {training.location}</span>
               </p>
               <small className="text-secondary">{training.duration}</small>
-
               <p
                 className="text-secondary mt-4 mb-0"
-                style={{ fontSize: "14px", lineHeight: "1.8", maxWidth: "500px"}}
+                style={{
+                  fontSize: "14px",
+                  lineHeight: "1.8",
+                  maxWidth: "500px",
+                }}
               >
                 {training.description}
               </p>
@@ -111,7 +114,11 @@ function Training() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.3, delay: index * 0.05 }}
-                    whileHover={{ color: "#198754", borderColor: "#198754", y: -2 }}
+                    whileHover={{
+                      color: "#198754",
+                      borderColor: "#198754",
+                      y: -2,
+                    }}
                   >
                     {technology}
                   </motion.span>

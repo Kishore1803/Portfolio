@@ -13,10 +13,8 @@ const navItems = [
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-
   const handleNavClick = (href) => {
     setMenuOpen(false);
-
     const section = document.querySelector(href);
 
     if (section) {
@@ -42,8 +40,6 @@ function Navbar() {
       }}
     >
       <div className="container py-2">
-        {/* ================= LOGO ================= */}
-
         <motion.a
           href="#Home"
           className="navbar-brand d-flex align-items-center gap-2 m-0"
@@ -71,8 +67,6 @@ function Navbar() {
           </span>
         </motion.a>
 
-        {/* ================= MOBILE TOGGLE ================= */}
-
         <button
           className="navbar-toggler border-0 shadow-none p-2"
           type="button"
@@ -83,8 +77,6 @@ function Navbar() {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-
-        {/* ================= NAVIGATION ================= */}
 
         <div
           className={`collapse navbar-collapse ${menuOpen ? "show" : ""}`}

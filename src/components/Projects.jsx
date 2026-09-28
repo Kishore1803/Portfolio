@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "motion/react";
 
 const projects = [
@@ -7,7 +6,7 @@ const projects = [
     title: "Communication in Black Spot using LoRa Technology",
     category: "Academic Project",
     image: "/Projects/spots.jpg",
-    points: [
+    description: [
       "Designed a communication system for network dead zones.",
       "Used LoRa technology for long-range communication.",
       "Integrated Arduino and GSM modules.",
@@ -20,7 +19,7 @@ const projects = [
     title: "DM Health & Wealth",
     category: "Web Application",
     image: "/Projects/dm.png",
-    points: [
+    description: [
       "Built responsive websites for health and financial services.",
       "Designed modern layouts with easy navigation.",
       "Developed frontend features using React and Firebase.",
@@ -35,7 +34,7 @@ const projects = [
     title: "Make My Tour",
     category: "Travel Booking Platform",
     image: "/Projects/makemytour.png",
-    points: [
+    description: [
       "Developed a travel booking platform for flights and hotels.",
       "Implemented dynamic pricing, price history, and price freeze.",
       "Built flight tracking features using full-stack technologies.",
@@ -50,7 +49,7 @@ const projects = [
     title: "Elite Ice Creams",
     category: "Web Application",
     image: "/Projects/icecream.png",
-    points: [
+    description: [
       "Developed a responsive website for an ice cream business.",
       "Created an attractive product interface with easy navigation.",
       "Implemented responsive UI using modern frontend technologies.",
@@ -73,7 +72,7 @@ const projects = [
     title: "Click Crafty",
     category: "Web Application",
     image: "/Projects/click.png",
-    points: [
+    description: [
       "Built a platform for downloading high-quality illustrations.",
       "Created a clean and user-friendly interface.",
       "Implemented responsive UI using React.js.",
@@ -88,7 +87,7 @@ const projects = [
     title: "Todo List Application",
     category: "Frontend Project",
     image: "/Projects/Todo.png",
-    points: [
+    description: [
       "Created a simple task management application.",
       "Implemented add and delete task functionality.",
       "Updated the UI dynamically using JavaScript.",

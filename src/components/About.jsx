@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "motion/react";
 import profileImage from "../assets/myprofile.png";
 
