@@ -6,7 +6,7 @@ const training = {
   title: "Java Full Stack Developer Training",
   company: "Besant Technologies",
   location: "Chennai",
-  duration: "Oct 2025 - Sep 2026",
+  duration: "October 2025 - September 2026",
   description:
     "Hands-on training focused on developing modern web applications using frontend, backend, database, and development tools.",
   technologies: [

@@ -6,7 +6,7 @@ const education = [
     title: "B.E. - ECE",
     fullTitle: "Electronics & Communication Engineering",
     institution: "Dhirajlal Gandhi College of Technology",
-    duration: "2021 - 2025",
+    duration: "October 2021 - June 2025",
     result: "CGPA: 8.10",
   },
   {
@@ -14,7 +14,7 @@ const education = [
     title: "B.E. Minor Degree",
     fullTitle: "Business Analytics",
     institution: "Dhirajlal Gandhi College of Technology",
-    duration: "2023 - 2025",
+    duration: "June 2023 - June 2025",
     result: "CGPA: 8.16",
   },
   {
@@ -22,7 +22,7 @@ const education = [
     title: "Higher Secondary",
     fullTitle: "HSC / 12th",
     institution: "SRV Matric Hr Sec School",
-    duration: "2020 - 2021",
+    duration: "June 2020 - April 2021",
     result: "Percentage: 85.6%",
   },
   {
@@ -30,7 +30,7 @@ const education = [
     title: "Secondary School",
     fullTitle: "SSLC / 10th",
     institution: "SRV Matric Hr Sec School",
-    duration: "2018 - 2019",
+    duration: "June 2018 - April 2019",
     result: "Percentage: 77.8%",
   },
 ];

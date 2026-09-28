@@ -6,7 +6,7 @@ const experiences = [
     role: "Full Stack Developer Intern",
     company: "Elevance Skills",
     location: "Dharmapuri, Remote",
-    duration: "Jul 2026 - Present",
+    duration: "July 2026 - Present",
     points: [
       "Developed responsive web applications using HTML, CSS, Bootstrap, JavaScript, React.js, Spring Boot, and MySQL.",
       "Designed and integrated RESTful APIs to enable seamless communication between frontend and backend applications.",
@@ -19,7 +19,7 @@ const experiences = [
     role: "Front End Developer Intern",
     company: "Six Sigma Solutions",
     location: "Salem, On-site",
-    duration: "Sep 2025 - Jan 2026",
+    duration: "September 2025 - January 2026",
     points: [
       "Built responsive and modern web interfaces using HTML, CSS, JavaScript, and Bootstrap.",
       "Developed reusable UI components with React.js.",
@@ -29,7 +29,7 @@ const experiences = [
   },
     {
     number: "03",
-    role: "Graduate Engineering Trainee",
+    role: "Graduate Engineer Trainee",
     company: "Mobase Electronics",
     location: "Chennai, On-site",
     duration: "April 2025 - May 2025",

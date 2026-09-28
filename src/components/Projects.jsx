@@ -75,7 +75,7 @@ const projects = [
     description: [
       "Built a platform for downloading high-quality illustrations.",
       "Created a clean and user-friendly interface.",
-      "Implemented responsive UI using React.js.",
+      "Implemented responsive UI using React.js and modern technologies.",
     ],
     technologies: ["HTML", "CSS", "JavaScript", "React.js"],
     live: "https://click-crafty.vercel.app/",
