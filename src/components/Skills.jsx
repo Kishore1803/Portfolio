@@ -47,7 +47,6 @@ function Skills() {
       className="py-5 min-vh-100 bg-black text-white d-flex align-items-center"
     >
       <div className="container py-5">
-        {/* HEADER */}
         <motion.div
           className="mb-4"
           initial={{ opacity: 0, y: 25 }}
@@ -64,14 +63,12 @@ function Skills() {
           >
             Tools I use to <span className="text-success">build.</span>
           </h2>
-
           <p className="text-secondary mb-0" style={{ fontSize: "15px" }}>
             Technologies and tools I use to create reliable and modern web
             applications.
           </p>
         </motion.div>
 
-        {/* SKILL GROUPS */}
         <div className="row g-4">
           {skillGroups.map((group, index) => (
             <motion.div
@@ -83,14 +80,11 @@ function Skills() {
               transition={{ duration: 0.5, delay: index * 0.08 }}
             >
               <div className="h-100 border-top border-secondary border-opacity-50 pt-3">
-                {/* NUMBER + TITLE */}
                 <div className="d-flex justify-content-between align-items-center mb-3">
                   <h5 className="fw-bold mb-0">{group.title}</h5>
-
                   <small className="text-success">{group.number}</small>
                 </div>
 
-                {/* SKILLS */}
                 <div>
                   {group.skills.map((skill, skillIndex) => (
                     <motion.div
@@ -118,7 +112,6 @@ function Skills() {
           ))}
         </div>
 
-        {/* SOFT SKILLS */}
         <motion.div
           className="border-top border-secondary border-opacity-25 mt-4 pt-4"
           initial={{ opacity: 0, y: 25 }}
