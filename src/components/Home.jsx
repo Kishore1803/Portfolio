@@ -42,8 +42,9 @@ function Home() {
 
   return (
     <section
+    style={{marginTop: "70px"}}
       id="Home"
-      className="bg-black text-white d-flex align-items-center mt-5"
+      className="bg-black text-white d-flex align-items-center"
     >
       <div className="container py-5">
         <div className="row align-items-center gy-5">
@@ -177,6 +178,7 @@ function Home() {
 
         <motion.div
           className="row mt-5 pt-4 border-top border-secondary border-opacity-25"
+          style={{textAlign:"center"}}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
@@ -191,12 +193,12 @@ function Home() {
             <small className="text-secondary">Projects</small>
           </div>
 
-          <div className="col-6 col-md-3">
+          <div className="col-6 col-md-3 mb-3 mb-md-0">
             <h4 className="fw-bold mb-1">React</h4>
             <small className="text-secondary">Frontend</small>
           </div>
 
-          <div className="col-6 col-md-3">
+          <div className="col-6 col-md-3 mb-3 mb-md-0">
             <h4 className="fw-bold mb-1">Java</h4>
             <small className="text-secondary">Full Stack</small>
           </div>
