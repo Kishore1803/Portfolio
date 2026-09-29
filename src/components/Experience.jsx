@@ -21,13 +21,13 @@ const experiences = [
     location: "Salem, On-site",
     duration: "September 2025 - January 2026",
     points: [
-      "Built responsive and modern web interfaces using HTML, CSS, JavaScript, and Bootstrap.",
-      "Developed reusable UI components with React.js.",
-      "Integrated REST APIs and collaborated with backend teams.",
-      "Improved UI performance and ensured cross-browser compatibility.",
+      "Built responsive web interfaces using HTML, CSS, JavaScript, and Bootstrap for different screen sizes.",
+      "Developed reusable and user-friendly UI components using React.js with clean component structure.",
+      "Integrated REST APIs and worked with backend teams to connect frontend features with services.",
+      "Improved UI performance and ensured consistent functionality across different browsers.",
     ],
   },
-    {
+  {
     number: "03",
     role: "Graduate Engineer Trainee",
     company: "Mobase Electronics",
@@ -80,7 +80,6 @@ function Experience() {
               viewport={{ once: true, amount: 0.15 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-
               <div className="col-lg-1 mb-3 mb-lg-0">
                 <span
                   className="text-success fw-semibold"
@@ -110,7 +109,11 @@ function Experience() {
               <div className="col-lg-7">
                 <ul
                   className="ps-3 mb-0 text-secondary"
-                  style={{ fontSize: "13px", lineHeight: "1.7", textAlign: "justify" }}
+                  style={{
+                    fontSize: "13px",
+                    lineHeight: "1.7",
+                    textAlign: "justify",
+                  }}
                 >
                   {experience.points.map((point, pointIndex) => (
                     <li key={pointIndex} className="mb-1">
