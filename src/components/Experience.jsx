@@ -49,7 +49,6 @@ function Experience() {
       className="py-5 min-vh-100 bg-black text-white d-flex align-items-center"
     >
       <div className="container py-5">
-        {/* Section Header */}
         <motion.div
           className="mb-5"
           initial={{ opacity: 0, y: 25 }}
@@ -66,13 +65,11 @@ function Experience() {
           >
             Where I've <span className="text-success">grown.</span>
           </h2>
-
           <p className="text-secondary mb-0" style={{ fontSize: "15px" }}>
             My professional and hands-on development experience.
           </p>
         </motion.div>
 
-        {/* Experience */}
         <div>
           {experiences.map((experience, index) => (
             <motion.div
@@ -83,7 +80,7 @@ function Experience() {
               viewport={{ once: true, amount: 0.15 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              {/* Number */}
+
               <div className="col-lg-1 mb-3 mb-lg-0">
                 <span
                   className="text-success fw-semibold"
@@ -93,7 +90,6 @@ function Experience() {
                 </span>
               </div>
 
-              {/* Role & Company */}
               <div className="col-lg-4 mb-3 mb-lg-0">
                 <h4 className="fw-semibold mb-2" style={{ fontSize: "20px" }}>
                   {experience.role}
