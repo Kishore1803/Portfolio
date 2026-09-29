@@ -114,7 +114,7 @@ function Experience() {
               <div className="col-lg-7">
                 <ul
                   className="ps-3 mb-0 text-secondary"
-                  style={{ fontSize: "13px", lineHeight: "1.8" }}
+                  style={{ fontSize: "13px", lineHeight: "1.7", textAlign: "justify" }}
                 >
                   {experience.points.map((point, pointIndex) => (
                     <li key={pointIndex} className="mb-1">

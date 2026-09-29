@@ -21,8 +21,8 @@ const projects = [
     image: "/Projects/dm.png",
     description: [
       "Built responsive websites for health and financial services.",
-      "Designed modern layouts with easy navigation.",
-      "Developed frontend features using React and Firebase.",
+      " Designed modern layouts with easy navigation.",
+      " Developed Responsive frontend features using React and Firebase.",
     ],
     technologies: ["HTML", "CSS", "React", "Bootstrap", "SQL", "Firebase"],
     live: "https://daily-money-bice.vercel.app/",
@@ -36,8 +36,8 @@ const projects = [
     image: "/Projects/makemytour.png",
     description: [
       "Developed a travel booking platform for flights and hotels.",
-      "Implemented dynamic pricing, price history, and price freeze.",
-      "Built flight tracking features using full-stack technologies.",
+      " Implemented dynamic pricing, price history, and price freeze.",
+      " Built flight tracking features using full-stack technologies.",
     ],
     technologies: ["Next.js", "React", "TypeScript", "Spring Boot", "MySQL"],
     live: "https://make-my-trip-clone-springboot-frontend.onrender.com",
@@ -51,12 +51,10 @@ const projects = [
     image: "/Projects/icecream.png",
     description: [
       "Developed a responsive website for an ice cream business.",
-      "Created an attractive product interface with easy navigation.",
-      "Implemented responsive UI using modern frontend technologies.",
+      " Created an attractive product interface.",
+      " Responsive UI using modern frontend technologies.",
     ],
     technologies: [
-      "HTML",
-      "CSS",
       "JavaScript",
       "React.js",
       "Bootstrap",
@@ -74,8 +72,8 @@ const projects = [
     image: "/Projects/click.png",
     description: [
       "Built a platform for downloading high-quality illustrations.",
-      "Created a clean and user-friendly interface.",
-      "Implemented responsive UI using React.js and modern technologies.",
+      " Created a clean and user-friendly interface.",
+      " Implemented responsive UI using React.js and modern technologies.",
     ],
     technologies: ["HTML", "CSS", "JavaScript", "React.js"],
     live: "https://click-crafty.vercel.app/",
@@ -89,8 +87,8 @@ const projects = [
     image: "/Projects/Todo.png",
     description: [
       "Created a simple task management application.",
-      "Implemented add and delete task functionality.",
-      "Updated the UI dynamically using JavaScript.",
+      " Implemented add and delete task functionality.",
+      " Updated the UI dynamically using JavaScript.",
     ],
     technologies: ["HTML", "CSS", "JavaScript"],
     live: "https://github-todolist.netlify.app/",
@@ -106,7 +104,6 @@ function Projects() {
       style={{ minHeight: "100vh" }}
     >
       <div className="container py-5">
-        {/* Header */}
         <motion.div
           className="mb-5"
           initial={{ opacity: 0, y: 25 }}
@@ -128,7 +125,6 @@ function Projects() {
           </p>
         </motion.div>
 
-        {/* Projects */}
         <div className="row g-4">
           {projects.map((project, index) => (
             <motion.div
@@ -144,7 +140,6 @@ function Projects() {
                 whileHover={{ y: -6 }}
                 transition={{ duration: 0.25 }}
               >
-                {/* Image */}
                 <div className="overflow-hidden" style={{ height: "200px" }}>
                   <motion.img
                     src={project.image}
@@ -157,7 +152,6 @@ function Projects() {
                   />
                 </div>
 
-                {/* Content */}
                 <div className="p-4 d-flex flex-column">
                   <div className="d-flex justify-content-between align-items-center mb-3">
                     <small
@@ -184,12 +178,11 @@ function Projects() {
 
                   <p
                     className="text-secondary mb-3"
-                    style={{ fontSize: "12px", lineHeight: "1.7" }}
+                    style={{ fontSize: "12px", lineHeight: "1.5", textAlign: "justify" }}
                   >
                     {project.description}
                   </p>
 
-                  {/* Technologies */}
                   <div className="d-flex flex-wrap gap-2 mb-4">
                     {project.technologies.map((technology) => (
                       <span
@@ -202,7 +195,6 @@ function Projects() {
                     ))}
                   </div>
 
-                  {/* Links */}
                   {(project.live || project.github) && (
                     <div className="d-flex gap-2 mt-auto">
                       {project.live && (
@@ -235,7 +227,6 @@ function Projects() {
                     </div>
                   )}
 
-                  {/* No links */}
                   {!project.live && !project.github && (
                     <span
                       className="text-success"

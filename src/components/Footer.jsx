@@ -5,7 +5,6 @@ function Footer() {
     <footer className="bg-black text-white border-top border-secondary border-opacity-25">
       <div className="container py-4">
         <div className="row align-items-center g-3">
-          {/* Logo */}
           <div className="col-md-4 text-center text-md-start">
             <a
               href="#Home"
@@ -15,15 +14,13 @@ function Footer() {
               <span className="text-success">Kishore</span>
             </a>
           </div>
-    
-          {/* Copyright */}
+
           <div className="col-md-4 text-center">
             <small className="text-secondary">
               © 2026 Kishore K. All rights reserved.
             </small>
           </div>
 
-          {/* Back to top */}
           <div className="col-md-4 text-center text-md-end">
             <motion.a
               href="#Home"

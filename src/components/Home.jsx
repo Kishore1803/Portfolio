@@ -3,6 +3,8 @@ import { motion } from "motion/react";
 import profileImage from "../assets/myprofile.png";
 
 const roles = [
+  "Front End Developer",
+  "Back End Developer",
   "Full Stack Developer",
   "Web Developer",
   "React Developer",
@@ -41,29 +43,16 @@ function Home() {
   return (
     <section
       id="Home"
-      className="min-vh-100 bg-black text-white d-flex align-items-center"
+      className="bg-black text-white d-flex align-items-center mt-5"
     >
       <div className="container py-5">
         <div className="row align-items-center gy-5">
-          {/* ================= LEFT CONTENT ================= */}
           <motion.div
             className="col-lg-7"
             initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
           >
-            {/* Small Label */}
-            <motion.p
-              className="text-success fw-semibold mb-3"
-              style={{ fontSize: "12px", letterSpacing: "2px" }}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.2 }}
-            >
-              FULL STACK DEVELOPER
-            </motion.p>
-
-            {/* Main Heading */}
             <motion.h1
               className="fw-bold mb-3"
               style={{
@@ -78,7 +67,6 @@ function Home() {
               Hi, I'm <span className="text-success">Kishore K</span>
             </motion.h1>
 
-            {/* Dynamic Role */}
             <motion.div className="mb-3" style={{ minHeight: "38px" }}>
               <motion.h3
                 key={roles[roleIndex]}
@@ -92,10 +80,9 @@ function Home() {
               </motion.h3>
             </motion.div>
 
-            {/* Description */}
             <motion.p
               className="text-secondary fs-5 mb-4"
-              style={{ maxWidth: "600px", lineHeight: "1.7" }}
+              style={{ maxWidth: "600px", lineHeight: "1.7", textAlign: "justify" }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
@@ -104,7 +91,6 @@ function Home() {
               frontend and backend technologies.
             </motion.p>
 
-            {/* Buttons */}
             <motion.div
               className="d-flex flex-wrap gap-3 mb-4"
               initial={{ opacity: 0, y: 20 }}
@@ -143,7 +129,6 @@ function Home() {
               </motion.a>
             </motion.div>
 
-            {/* Social Links */}
             <motion.div
               className="d-flex gap-3"
               initial={{ opacity: 0 }}
@@ -167,7 +152,6 @@ function Home() {
             </motion.div>
           </motion.div>
 
-          {/* ================= RIGHT IMAGE ================= */}
           <motion.div
             className="col-lg-5 text-center"
             initial={{ opacity: 0, x: 40 }}
@@ -191,32 +175,27 @@ function Home() {
           </motion.div>
         </div>
 
-        {/* ================= STATS ================= */}
         <motion.div
           className="row mt-5 pt-4 border-top border-secondary border-opacity-25"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
         >
-          {/* Stat 1 */}
           <div className="col-6 col-md-3 mb-3 mb-md-0">
             <h4 className="fw-bold mb-1">6 Months</h4>
             <small className="text-secondary">Experience</small>
           </div>
 
-          {/* Stat 2 */}
           <div className="col-6 col-md-3 mb-3 mb-md-0">
             <h4 className="fw-bold mb-1">5+</h4>
             <small className="text-secondary">Projects</small>
           </div>
 
-          {/* Stat 3 */}
           <div className="col-6 col-md-3">
             <h4 className="fw-bold mb-1">React</h4>
             <small className="text-secondary">Frontend</small>
           </div>
 
-          {/* Stat 4 */}
           <div className="col-6 col-md-3">
             <h4 className="fw-bold mb-1">Java</h4>
             <small className="text-secondary">Full Stack</small>

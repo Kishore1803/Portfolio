@@ -59,15 +59,6 @@ const certifications = [
   },
   {
     number: "07",
-    title: "Problem Solving Through Programming",
-    organization: "Dhirajlal Gandhi College of Technology",
-    location: "Salem",
-    technologies: "C Programming, Logic Building",
-    issued: "February 2024",
-    image: "/Certificates/problem-solving.jpg",
-  },
-  {
-    number: "08",
     title: "Neuro Forge",
     organization: "National Institute of Technology",
     location: "Trichy",

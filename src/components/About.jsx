@@ -8,7 +8,6 @@ function About() {
       className="py-5 min-vh-100 bg-black text-white d-flex align-items-center"
     >
       <div className="container py-5">
-        {/* HEADER */}
         <motion.div
           className="mb-3"
           initial={{ opacity: 0, y: 20 }}
@@ -27,9 +26,7 @@ function About() {
           </h2>
         </motion.div>
 
-        {/* CONTENT */}
         <div className="row align-items-center g-4">
-          {/* IMAGE */}
           <motion.div
             className="col-lg-4 text-center"
             initial={{ opacity: 0, x: -50 }}
@@ -46,7 +43,6 @@ function About() {
             />
           </motion.div>
 
-          {/* TEXT */}
           <motion.div
             className="col-lg-8"
             initial={{ opacity: 0, x: 50 }}
@@ -75,7 +71,7 @@ function About() {
 
             <p
               className="text-secondary mb-3"
-              style={{ fontSize: "15px", lineHeight: "1.7", maxWidth: "850px" }}
+              style={{ fontSize: "15px", lineHeight: "1.7", maxWidth: "850px", textAlign: "justify" }}
             >
               Hi, I'm <span className="text-white fw-semibold">Kishore K</span>,
               a passionate Frontend Developer and Java Full Stack Developer. I
@@ -86,11 +82,11 @@ function About() {
 
             <p
               className="text-secondary mb-3"
-              style={{ fontSize: "15px", lineHeight: "1.7", maxWidth: "850px" }}
+              style={{ fontSize: "15px", lineHeight: "1.7", maxWidth: "850px", textAlign: "justify" }}
             >
               I have worked on projects such as{" "}
               <span className="text-white">
-                MakeMyTour, DM Health and Wealth ,Elite Icecreams
+                Make My Tour, DM Health and Wealth ,Elite Icecreams
               </span>{" "}
               and focusing on responsive interfaces, usability and practical
               functionality.
@@ -98,16 +94,15 @@ function About() {
 
             <p
               className="text-secondary mb-4"
-              style={{ fontSize: "15px", lineHeight: "1.7", maxWidth: "850px" }}
+              style={{ fontSize: "15px", lineHeight: "1.7", maxWidth: "850px", textAlign: "justify"}}
             >
               I believe good software should be simple, reliable and easy to
               use. I continuously learn new technologies and look forward to
               growing as a developer.
             </p>
 
-            {/* HIGHLIGHTS */}
             <div className="border-top border-secondary border-opacity-25 pt-3">
-              <div className="row g-3">
+              <div className="row g-5">
                 <div className="col-4">
                   <div className="text-success fw-bold">React</div>
                   <small className="text-secondary">Frontend</small>
