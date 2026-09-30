@@ -7,7 +7,7 @@ const education = [
     fullTitle: "Electronics & Communication Engineering",
     institution: "Dhirajlal Gandhi College of Technology",
     duration: "October 2021 - June 2025",
-    result: "CGPA: 8.10",
+    result: "CGPA: 8.07",
   },
   {
     number: "02",
