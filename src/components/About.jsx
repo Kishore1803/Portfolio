@@ -7,6 +7,7 @@ function About() {
       id="About"
       className="py-5 min-vh-100 bg-black text-white d-flex align-items-center"
     >
+      
       <div className="container py-5">
         <motion.div
           className="mb-3"

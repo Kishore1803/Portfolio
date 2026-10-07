@@ -44,7 +44,7 @@ function Skills() {
   return (
     <section
       id="Skill"
-      className="py-5 min-vh-100 bg-black text-white d-flex align-items-center"
+      className="mt-5 min-vh-100 bg-black text-white d-flex align-items-center"
     >
       <div className="container py-5">
         <motion.div
@@ -122,8 +122,8 @@ function Skills() {
           <div className="row align-items-center">
             <div className="col-lg-3 mb-3 mb-lg-0">
               <small
-                className="text-success fw-semibold text-uppercase"
-                style={{ fontSize: "10px", letterSpacing: "1.5px" }}
+                className="fw-semibold text-uppercase"
+                style={{ fontSize: "", letterSpacing: "1.5px" }}
               >
                 Soft Skills
               </small>

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { motion } from "motion/react";
+import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
 import profileImage from "../assets/myprofile.png";
 
 const roles = [
@@ -32,177 +32,240 @@ const socialLinks = [
 function Home() {
   const [roleIndex, setRoleIndex] = useState(0);
 
+  // Role change
   useEffect(() => {
     const interval = setInterval(() => {
       setRoleIndex((prev) => (prev + 1) % roles.length);
-    }, 2500);
+    }, 2800);
 
     return () => clearInterval(interval);
   }, []);
 
+  // Mouse movement
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+
+  const smoothX = useSpring(mouseX, {
+    stiffness: 70,
+    damping: 20,
+  });
+
+  const smoothY = useSpring(mouseY, {
+    stiffness: 70,
+    damping: 20,
+  });
+
+  const imageX = useTransform(smoothX, [-500, 500], [-12, 12]);
+  const imageY = useTransform(smoothY, [-500, 500], [-12, 12]);
+
+  const glowX = useTransform(smoothX, [-500, 500], [-30, 30]);
+  const glowY = useTransform(smoothY, [-500, 500], [-30, 30]);
+
+  const handleMouseMove = (e) => {
+    if (window.innerWidth <= 768) return;
+
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = e.clientX - (rect.left + rect.width / 2);
+    const y = e.clientY - (rect.top + rect.height / 2);
+
+    mouseX.set(x);
+    mouseY.set(y);
+  };
+
+  const handleMouseLeave = () => {
+    mouseX.set(0);
+    mouseY.set(0);
+  };
+
   return (
     <section
-    style={{marginTop: "70px"}}
       id="Home"
-      className="bg-black text-white d-flex align-items-center"
+      className="home-section mt-5"
+      style={{ minHeight: "100vh" }}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
     >
-      <div className="container py-5">
-        <div className="row align-items-center gy-5">
+      {/* Main Home Content */}
+      <div className="container home-container">
+        <div className="row align-items-center">
           <motion.div
-            className="col-lg-7"
-            initial={{ opacity: 0, x: -40 }}
+            className="col-lg-7 home-content"
+            initial={{ opacity: 0, x: -60 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
           >
-            <motion.h1
-              className="fw-bold mb-3"
-              style={{
-                fontSize: "clamp(48px, 6vw, 78px)",
-                lineHeight: "1.02",
-                letterSpacing: "-3px",
-              }}
-              initial={{ opacity: 0, y: 25 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.1 }}
-            >
-              Hi, I'm <span className="text-success">Kishore K</span>
-            </motion.h1>
-
-            <motion.div className="mb-3" style={{ minHeight: "38px" }}>
-              <motion.h3
-                key={roles[roleIndex]}
-                className="text-light fw-semibold mb-0"
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                style={{ fontSize: "clamp(22px, 3vw, 30px)" }}
-              >
-                {roles[roleIndex]}
-              </motion.h3>
-            </motion.div>
-
+            {/* Greeting */}
             <motion.p
-              className="text-secondary fs-5 mb-4"
-              style={{ maxWidth: "600px", lineHeight: "1.7", textAlign: "justify" }}
+              className="home-greeting"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              Hello, It's Me
+            </motion.p>
+
+            {/* Name */}
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+            >
+              Kishore K
+            </motion.h1>
+
+            {/* Dynamic Role */}
+            <div className="role-wrapper">
+              <motion.h2
+                key={roles[roleIndex]}
+                initial={{ opacity: 0, y: 25, filter: "blur(7px)" }}
+                animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+              >
+                And I'm a <span>{roles[roleIndex]}</span>
+              </motion.h2>
+            </div>
+
+            {/* Description */}
+            <motion.p
+              className="home-description"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.5 }}
             >
               I build responsive and user-friendly web applications using modern
               frontend and backend technologies.
             </motion.p>
 
+            {/* Social Links */}
             <motion.div
-              className="d-flex flex-wrap gap-3 mb-4"
+              className="home-socials"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              transition={{ duration: 0.7, delay: 0.65 }}
+            >
+              {socialLinks.map((social, index) => (
+                <motion.a
+                  key={social.name}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.name}
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.7 + index * 0.1, duration: 0.4 }}
+                  whileHover={{ y: -5, scale: 1.12 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <i className={social.icon}></i>
+                </motion.a>
+              ))}
+            </motion.div>
+
+            {/* Buttons */}
+            <motion.div
+              className="home-buttons"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.8 }}
             >
               <motion.a
+                href="/Downloads/Kishore_K_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="download-btn"
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0 0 30px rgba(25,135,84,0.45)",
+                }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Download CV
+                <i className="fa-solid fa-download ms-2"></i>
+              </motion.a>
+
+              <motion.a
                 href="#Projects"
-                className="btn btn-success rounded-pill px-4 py-3 fw-semibold"
+                className="work-btn"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 View My Work
                 <i className="fa-solid fa-arrow-right ms-2"></i>
               </motion.a>
-
-              <motion.a
-                href="#Contact"
-                className="btn btn-outline-light rounded-pill px-4 py-3 fw-semibold"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Get in Touch
-              </motion.a>
-
-              <motion.a
-                href="/Downloads/Kishore_K_Resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-outline-success rounded-pill px-4 py-3 fw-semibold"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Resume
-                <i className="fa-solid fa-arrow-up-right-from-square ms-2"></i>
-              </motion.a>
-            </motion.div>
-
-            <motion.div
-              className="d-flex gap-3"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-            >
-              {socialLinks.map((social) => (
-                <motion.a
-                  key={social.name}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary fs-5"
-                  aria-label={social.name}
-                  whileHover={{ color: "#198754", y: -4 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <i className={social.icon}></i>
-                </motion.a>
-              ))}
             </motion.div>
           </motion.div>
 
           <motion.div
-            className="col-lg-5 text-center"
-            initial={{ opacity: 0, x: 40 }}
+            className="col-lg-5 home-image-column"
+            initial={{ opacity: 0, x: 70 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 1, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
           >
             <motion.div
-              className="position-relative d-inline-block"
+              className="profile-area"
+              style={{ x: imageX, y: imageY }}
               animate={{ y: [0, -8, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              transition={{
+                duration: 4.5,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
             >
-              <img
-                src={profileImage}
-                alt="Kishore K"
-                className="img-fluid rounded-circle"
-                loading="eager"
-                fetchPriority="high"
-                style={{ width: "300px", height: "300px", objectFit: "cover" }}
+              {/* Glow */}
+              <motion.div
+                className="profile-glow"
+                animate={{ scale: [1, 1.08, 1], opacity: [0.45, 0.8, 0.45] }}
+                transition={{
+                  duration: 3.5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
               />
+
+              {/* Hexagon */}
+              <motion.div
+                className="hexagon"
+                whileHover={{ scale: 1.03 }}
+                transition={{ duration: 0.4 }}
+              >
+                <div className="hexagon-inner">
+                  <img
+                    src={profileImage}
+                    alt="Kishore K"
+                    loading="eager"
+                    fetchPriority="high"
+                  />
+                </div>
+              </motion.div>
+
+              {/* Floating Code */}
+              <motion.div
+                className="floating-code"
+                animate={{ y: [0, -8, 0], rotate: [0, 4, 0] }}
+                transition={{
+                  duration: 3.5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              >
+                &lt;/&gt;
+              </motion.div>
+
+              {/* Floating K */}
+              <motion.div
+                className="floating-k"
+                animate={{ y: [0, 8, 0], rotate: [0, -4, 0] }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              >
+                K
+              </motion.div>
             </motion.div>
           </motion.div>
         </div>
-
-        <motion.div
-          className="row mt-5 pt-4 border-top border-secondary border-opacity-25"
-          style={{textAlign:"center"}}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-        >
-          <div className="col-6 col-md-3 mb-3 mb-md-0">
-            <h4 className="fw-bold mb-1">6 Months</h4>
-            <small className="text-secondary">Experience</small>
-          </div>
-
-          <div className="col-6 col-md-3 mb-3 mb-md-0">
-            <h4 className="fw-bold mb-1">5+</h4>
-            <small className="text-secondary">Projects</small>
-          </div>
-
-          <div className="col-6 col-md-3 mb-3 mb-md-0">
-            <h4 className="fw-bold mb-1">React</h4>
-            <small className="text-secondary">Frontend</small>
-          </div>
-
-          <div className="col-6 col-md-3 mb-3 mb-md-0">
-            <h4 className="fw-bold mb-1">Java</h4>
-            <small className="text-secondary">Full Stack</small>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

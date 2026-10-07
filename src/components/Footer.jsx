@@ -1,5 +1,7 @@
 import { motion } from "motion/react";
 
+const currentyear = new Date().getFullYear();
+
 function Footer() {
   return (
     <footer className="bg-black text-white border-top border-secondary border-opacity-25">
@@ -17,7 +19,7 @@ function Footer() {
 
           <div className="col-md-4 text-center">
             <small className="text-secondary">
-              © 2026 Kishore K. All rights reserved.
+              © {currentyear} Kishore K. All rights reserved.
             </small>
           </div>
 

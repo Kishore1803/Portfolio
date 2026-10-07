@@ -21,10 +21,10 @@ const experiences = [
     location: "Salem, On-site",
     duration: "September 2025 - January 2026",
     points: [
-      "Built responsive web interfaces using HTML, CSS, JavaScript, and Bootstrap for different screen sizes.",
-      "Developed reusable and user-friendly UI components using React.js with clean component structure.",
-      "Integrated REST APIs and worked with backend teams to connect frontend features with services.",
-      "Improved UI performance and ensured consistent functionality across different browsers.",
+      "Built responsive and user-friendly web interfaces using HTML, CSS, JavaScript, and Bootstrap, ensuring consistent layouts and smooth user experiences across desktops, tablets, and mobile devices.",
+      "Developed reusable and maintainable UI components using React.js, following a clean component-based structure to improve code organization, scalability, and overall application usability.",
+      "Integrated RESTful APIs with frontend applications and collaborated with backend developers to connect services, handle dynamic data.",
+      "Improved application performance, usability, and cross-browser compatibility by optimizing UI components, resolving frontend issues, and ensuring consistent functionality across different browsers and screen sizes.",
     ],
   },
   {
@@ -34,10 +34,10 @@ const experiences = [
     location: "Chennai, On-site",
     duration: "April 2025 - May 2025",
     points: [
-      "Gained practical exposure to electronics manufacturing processes and production operations.",
-      "Assisted with process monitoring, quality control, and adherence to manufacturing standards.",
-      "Collaborated with cross-functional teams to understand manufacturing workflows and operational procedures.",
-      "Developed knowledge of continuous improvement practices, workplace safety, and quality standards.",
+      "Gained practical exposure to electronics manufacturing processes and day-to-day production operations, developing an understanding of assembly procedures, production workflows, and standard manufacturing practices.",
+      "Assisted in monitoring production processes and quality control activities, ensuring products and operations followed defined manufacturing procedures, quality requirements, and established production standards.",
+      "Collaborated with cross-functional teams to understand end-to-end manufacturing workflows, coordinate operational activities, and gain practical knowledge of workplace procedures and production management.",
+      "Developed a strong understanding of continuous improvement practices, workplace safety procedures, quality standards, and process efficiency while observing real-world manufacturing and operational environments.",
     ],
   },
 ];
@@ -58,10 +58,7 @@ function Experience() {
         >
           <h2
             className="fw-bold mt-2 mb-2"
-            style={{
-              fontSize: "clamp(36px, 4vw, 52px)",
-              letterSpacing: "-2px",
-            }}
+            style={{ fontSize: "clamp(36px, 4vw, 52px)" }}
           >
             Where I've <span className="text-success">grown.</span>
           </h2>
@@ -83,7 +80,7 @@ function Experience() {
               <div className="col-lg-1 mb-3 mb-lg-0">
                 <span
                   className="text-success fw-semibold"
-                  style={{ fontSize: "12px" }}
+                  style={{ fontSize: "10px" }}
                 >
                   {experience.number}
                 </span>

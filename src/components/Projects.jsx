@@ -8,8 +8,8 @@ const projects = [
     image: "/Projects/spots.jpg",
     description: [
       "Designed a communication system for network dead zones.",
-      "Used LoRa technology for long-range communication.",
-      "Integrated Arduino and GSM modules.",
+      " Used LoRa technology for long-range communication.",
+      " Integrated Arduino and GSM modules.",
     ],
     technologies: ["LoRa", "Arduino", "GSM"],
   },

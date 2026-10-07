@@ -50,15 +50,6 @@ const certifications = [
   },
   {
     number: "06",
-    title: "IoT using Arduino",
-    organization: "Dhirajlal Gandhi College of Technology",
-    location: "Salem",
-    technologies: "Arduino, Sensors, IoT",
-    issued: "February 2023",
-    image: "/Certificates/iot-arduino.jpg",
-  },
-  {
-    number: "07",
     title: "Neuro Forge",
     organization: "National Institute of Technology",
     location: "Trichy",
