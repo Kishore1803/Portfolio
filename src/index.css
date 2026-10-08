@@ -190,36 +190,14 @@ body::-webkit-scrollbar {
   filter: blur(35px);
 }
 
-.hexagon {
+.circle {
   position: relative;
   width: 310px;
   height: 355px;
   padding: 4px;
-  background: #198754;
-  z-index: 2;
-  clip-path: polygon(
-    25% 3%,
-    75% 3%,
-    100% 25%,
-    100% 75%,
-    75% 97%,
-    25% 97%,
-    0 75%,
-    0 25%
-  );
-  filter: drop-shadow(0 0 18px rgba(25, 135, 84, 0.65))
-    drop-shadow(0 20px 35px rgba(25, 135, 84, 0.25));
 }
 
-.hexagon-inner {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background: #101010;
-  clip-path: inherit;
-}
-
-.hexagon-inner img {
+.circle-inner img {
   width: 100%;
   height: 100%;
   display: block;
@@ -227,6 +205,8 @@ body::-webkit-scrollbar {
   object-position: center;
   transform: scale(1.04);
   transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  border-radius: 45%;
+  border: 2px solid green;
 }
 
 .hexagon:hover .hexagon-inner img {

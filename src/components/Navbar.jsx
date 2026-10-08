@@ -49,12 +49,7 @@ function Navbar() {
         >
           <span
             className="d-flex align-items-center justify-content-center rounded-circle bg-success text-dark fw-bold"
-            style={{
-              width: "40px",
-              height: "40px",
-              fontSize: "22px",
-              flexShrink: 0,
-            }}
+            style={{ width: "40px", height: "40px", fontSize: "22px" }}
           >
             K
           </span>

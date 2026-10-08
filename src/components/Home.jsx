@@ -222,13 +222,13 @@ function Home() {
                 }}
               />
 
-              {/* Hexagon */}
+              {/* circle*/}
               <motion.div
-                className="hexagon"
+                className="circle"
                 whileHover={{ scale: 1.03 }}
                 transition={{ duration: 0.4 }}
               >
-                <div className="hexagon-inner">
+                <div className="circle-inner">
                   <img
                     src={profileImage}
                     alt="Kishore K"
