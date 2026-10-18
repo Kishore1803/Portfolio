@@ -6,7 +6,7 @@ const experiences = [
     role: "Full Stack Developer Intern",
     company: "Elevance Skills",
     location: "Dharmapuri, Remote",
-    duration: "July 2026 - Present",
+    duration: "July 2026 - October 2026",
     points: [
       "Developed responsive web applications using HTML, CSS, Bootstrap, JavaScript, React.js, Spring Boot, and MySQL.",
       "Designed and integrated RESTful APIs to enable seamless communication between frontend and backend applications.",
