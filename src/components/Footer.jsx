@@ -69,7 +69,7 @@ function Footer() {
               whileHover={{ scale: 1.04 }}
               transition={{ duration: 0.25 }}
             >
-              Kishore.
+              Kishore K
             </motion.a>
 
             <p
