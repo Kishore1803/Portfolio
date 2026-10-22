@@ -59,161 +59,227 @@ const certifications = [
   },
 ];
 
+const headingGradient = {
+  background: "linear-gradient(90deg, #00E5FF, #A78BFA, #FF75D8)",
+  WebkitBackgroundClip: "text",
+  WebkitTextFillColor: "transparent",
+};
+
 function Certifications() {
   return (
     <section
       id="Certifications"
-      className="py-5 min-vh-100 bg-black text-white d-flex align-items-center"
+      className="container-fluid py-5 text-white d-flex align-items-center"
     >
-      <div className="container py-5">
+      <div className="container">
+        {/* Section Heading */}
         <motion.div
-          className="mb-5"
-          initial={{ opacity: 0, x: -50 }}
+          className="mt-5 mb-5"
+          initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          transition={{
+            duration: 0.8,
+            ease: [0.22, 1, 0.36, 1],
+          }}
         >
+          <p
+            className="mb-2 fw-semibold"
+            style={{
+              color: "#00E5FF",
+              fontSize: "12px",
+              letterSpacing: "3px",
+              textTransform: "uppercase",
+            }}
+          >
+            My Achievements
+          </p>
+
           <h2
-            className="fw-bold mt-2 mb-2"
+            className="fw-bold mt-2 mb-3"
             style={{
               fontSize: "clamp(36px, 4vw, 52px)",
               letterSpacing: "-2px",
             }}
           >
-            Proof of <span className="text-success">learning.</span>
+            Proof of <span>learning</span>
           </h2>
 
           <p
-            className="text-secondary mb-0"
-            style={{ fontSize: "15px", maxWidth: "600px" }}
+            className="mb-0"
+            style={{
+              color: "#FFFFFF",
+              fontSize: "15px",
+              lineHeight: "1.8",
+              maxWidth: "600px",
+            }}
           >
             Courses, workshops, and technical certifications that support my
             continuous learning journey.
           </p>
         </motion.div>
 
+        {/* Certification Cards */}
         <div className="row g-4">
           {certifications.map((certificate, index) => (
             <motion.div
               key={certificate.number}
               className="col-12 col-md-6 col-lg-4"
-              initial={{ opacity: 0, y: 45 }}
+              initial={{ opacity: 0, y: 35 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.15 }}
               transition={{
                 duration: 0.6,
-                delay: index * 0.07,
+                delay: index * 0.08,
                 ease: [0.22, 1, 0.36, 1],
               }}
             >
               <motion.div
-                className="h-100 border border-secondary border-opacity-25 rounded-4 bg-dark bg-opacity-25"
-                whileHover={{ y: -7, borderColor: "rgba(25, 135, 84, 0.6)" }}
+                className="h-100 rounded-4"
+                whileHover={{
+                  y: -7,
+                  borderColor: "rgba(0, 229, 255, 0.65)",
+                }}
                 transition={{ duration: 0.3 }}
-                style={{ minHeight: "310px" }}
+                style={{
+                  minHeight: "310px",
+                  background: "transparent",
+                  border: "1px solid rgba(255, 255, 255, 0.2)",
+                  boxShadow: "0 0 0 rgba(0, 229, 255, 0)",
+                  transition: "box-shadow 0.3s ease",
+                }}
               >
                 <div className="p-4 h-100 d-flex flex-column">
-                  {/* Number + Type */}
-
+                  {/* Number and Label */}
                   <div className="d-flex justify-content-between align-items-center mb-4">
                     <span
-                      className="text-success fw-semibold"
-                      style={{ fontSize: "12px", letterSpacing: "1px" }}
+                      className="fw-semibold"
+                      style={{
+                        ...headingGradient,
+                        fontSize: "13px",
+                        letterSpacing: "1.5px",
+                      }}
                     >
                       {certificate.number}
                     </span>
 
                     <span
-                      className="text-secondary text-uppercase"
-                      style={{ fontSize: "9px", letterSpacing: "1.5px" }}
+                      style={{
+                        color: "#FFFFFF",
+                        fontSize: "10px",
+                        letterSpacing: "1.5px",
+                        textTransform: "uppercase",
+                      }}
                     >
                       Certificate
                     </span>
                   </div>
 
-                  {/* Title */}
-
+                  {/* Certificate Title */}
                   <h4
                     className="fw-semibold mb-3"
-                    style={{ fontSize: "20px", lineHeight: "1.35" }}
+                    style={{
+                      ...headingGradient,
+                      fontSize: "21px",
+                      lineHeight: "1.4",
+                    }}
                   >
                     {certificate.title}
                   </h4>
+
                   {/* Organization */}
-                  <p className="text-success mb-1" style={{ fontSize: "13px" }}>
+                  <p
+                    className="mb-2"
+                    style={{
+                      color: "#FFFFFF",
+                      fontSize: "14px",
+                      fontWeight: 600,
+                    }}
+                  >
                     {certificate.organization}
                   </p>
 
                   {/* Location */}
-
                   <p
-                    className="text-secondary mb-3"
-                    style={{ fontSize: "12px" }}
+                    className="mb-4"
+                    style={{
+                      color: "#FFFFFF",
+                      fontSize: "12px",
+                    }}
                   >
-                    <i className="fa-solid fa-location-dot me-2"></i>
+                    <i className="fa-solid fa-location-dot me-2" />
                     {certificate.location}
                   </p>
 
-                  {/* Technologies */}
-
+                  {/* Technologies Covered */}
                   <div className="mb-4">
-                    <small
-                      className="text-secondary d-block mb-2"
+                    <p
+                      className="mb-2 fw-semibold"
                       style={{
+                        ...headingGradient,
                         fontSize: "10px",
+                        letterSpacing: "1.5px",
                         textTransform: "uppercase",
-                        letterSpacing: "1px",
                       }}
                     >
-                      Covered
-                    </small>
+                      Technologies Covered
+                    </p>
 
                     <p
-                      className="text-light mb-0"
+                      className="mb-0"
                       style={{
+                        color: "#FFFFFF",
                         fontSize: "12px",
-                        lineHeight: "1.7",
-                        opacity: 0.75,
+                        lineHeight: "1.8",
                       }}
                     >
                       {certificate.technologies}
                     </p>
                   </div>
 
-                  {/* Bottom */}
-
-                  <div className="mt-auto pt-3 border-top border-secondary border-opacity-25">
-                    <div className="d-flex justify-content-between align-items-center">
-                      {/* Issued */}
-
+                  {/* Issued Date and Certificate Link */}
+                  <div
+                    className="mt-auto pt-3 border-top"
+                    style={{
+                      borderColor: "rgba(255, 255, 255, 0.2)",
+                    }}
+                  >
+                    <div className="d-flex justify-content-between align-items-center gap-2">
                       <div>
-                        <small
-                          className="text-secondary d-block"
+                        <p
+                          className="mb-1 fw-semibold"
                           style={{
-                            fontSize: "9px",
-                            textTransform: "uppercase",
+                            ...headingGradient,
+                            fontSize: "10px",
                             letterSpacing: "1px",
+                            textTransform: "uppercase",
                           }}
                         >
                           Issued
-                        </small>
+                        </p>
 
-                        <small
-                          className="text-light"
-                          style={{ fontSize: "11px" }}
+                        <p
+                          className="mb-0"
+                          style={{
+                            color: "#FFFFFF",
+                            fontSize: "11px",
+                          }}
                         >
                           {certificate.issued}
-                        </small>
+                        </p>
                       </div>
-
-                      {/* View Certificate */}
 
                       <motion.a
                         href={certificate.image}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-success text-decoration-none d-flex align-items-center gap-2"
-                        style={{ fontSize: "11px", fontWeight: "600" }}
+                        className="text-decoration-none d-flex align-items-center gap-2"
+                        style={{
+                          ...headingGradient,
+                          fontSize: "11px",
+                          fontWeight: 600,
+                          whiteSpace: "nowrap",
+                        }}
                         whileHover={{ x: 4 }}
                         transition={{ duration: 0.25 }}
                       >
@@ -221,7 +287,7 @@ function Certifications() {
                         <i
                           className="fa-solid fa-arrow-up-right-from-square"
                           style={{ fontSize: "9px" }}
-                        ></i>
+                        />
                       </motion.a>
                     </div>
                   </div>

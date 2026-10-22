@@ -2,6 +2,14 @@ import { useState } from "react";
 import { motion } from "motion/react";
 import { submitContactForm } from "./Api/ContactAPI";
 
+const headingGradient = {
+  background: "linear-gradient(90deg, #00E5FF, #A78BFA, #FF75D8)",
+  WebkitBackgroundClip: "text",
+  WebkitTextFillColor: "transparent",
+};
+
+const accentColor = "#00E5FF";
+
 function Contact() {
   const [formData, setFormData] = useState({
     name: "",
@@ -65,28 +73,40 @@ function Contact() {
   return (
     <section
       id="Contact"
-      className="py-5 min-vh-100 bg-black text-white d-flex align-items-center"
+      className="min-vh-100 text-white d-flex align-items-center"
     >
       <div className="container py-5">
         {/* Header */}
         <motion.div
-          className="mb-3"
+          className="mt-5 mb-5"
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
         >
+          <p
+            className="mb-2 fw-semibold"
+            style={{
+              color: accentColor,
+              fontSize: "12px",
+              letterSpacing: "3px",
+              textTransform: "uppercase",
+            }}
+          >
+            Get In Touch
+          </p>
+
           <h2
-            className="fw-bold mt-2 mb-2"
+            className="fw-bold mt-2 mb-3"
             style={{
               fontSize: "clamp(36px, 4vw, 52px)",
               letterSpacing: "-2px",
             }}
           >
-            Let's work <span className="text-success">together.</span>
+            Let's work <span>together</span>
           </h2>
 
-          <p className="text-secondary mb-0" style={{ fontSize: "15px" }}>
+          <p className="mb-0">
             Feel free to reach out for collaborations or opportunities.
           </p>
         </motion.div>
@@ -100,27 +120,42 @@ function Contact() {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="border-top border-secondary border-opacity-25 pt-4">
+            <div
+              className="border-top "
+              style={{ borderColor: "rgba(255,255,255,0.22)" }}
+            >
               <small
-                className="text-success text-uppercase fw-semibold"
-                style={{ fontSize: "10px", letterSpacing: "1.5px" }}
+                className="fw-semibold text-uppercase"
+                style={{
+                  fontSize: "10px",
+                  letterSpacing: "1.5px",
+                }}
               >
                 Get in touch
               </small>
 
               <h3
                 className="fw-semibold mt-3 mb-4"
-                style={{ fontSize: "25px" }}
+                style={{
+                  ...headingGradient,
+                  fontSize: "25px",
+                }}
               >
                 Have a project or opportunity?
               </h3>
 
               {/* Email */}
               <div className="d-flex gap-3 mb-4">
-                <i className="fa-solid fa-envelope text-success pt-1"></i>
+                <i
+                  className="fa-solid fa-envelope pt-1"
+                  style={{ color: accentColor }}
+                />
 
                 <div>
-                  <small className="text-secondary d-block mb-1">Email</small>
+                  <small className="d-block mb-1" style={{ color: "#FFFFFF" }}>
+                    Email
+                  </small>
+
                   <a
                     href="mailto:kannan.v4704@gmail.com"
                     className="text-white text-decoration-none"
@@ -133,10 +168,16 @@ function Contact() {
 
               {/* Phone */}
               <div className="d-flex gap-3 mb-4">
-                <i className="fa-solid fa-phone text-success pt-1"></i>
+                <i
+                  className="fa-solid fa-phone pt-1"
+                  style={{ color: accentColor }}
+                />
 
                 <div>
-                  <small className="text-secondary d-block mb-1">Phone</small>
+                  <small className="d-block mb-1" style={{ color: "#FFFFFF" }}>
+                    Phone
+                  </small>
+
                   <a
                     href="tel:+919600825271"
                     className="text-white text-decoration-none"
@@ -149,59 +190,70 @@ function Contact() {
 
               {/* Location */}
               <div className="d-flex gap-3 mb-4">
-                <i className="fa-solid fa-location-dot text-success pt-1"></i>
+                <i
+                  className="fa-solid fa-location-dot pt-1"
+                  style={{ color: accentColor }}
+                />
+
                 <div>
-                  <small className="text-secondary d-block mb-1">
+                  <small className="d-block mb-1" style={{ color: "#FFFFFF" }}>
                     Location
                   </small>
-                  <span style={{ fontSize: "14px" }}>
+
+                  <span style={{ fontSize: "14px", color: "#FFFFFF" }}>
                     Salem, Tamil Nadu, India
                   </span>
                 </div>
               </div>
 
               {/* Social Links */}
-              <div className="border-top border-secondary border-opacity-25 pt-4 mt-4">
-                <small className="text-secondary d-block mb-3">
+              <div
+                className="border-top pt-4 mt-4"
+                style={{ borderColor: "rgba(255,255,255,0.22)" }}
+              >
+                <small className="d-block mb-3" style={{ color: "#FFFFFF" }}>
                   Find me online
                 </small>
 
-                <div className="d-flex gap-3">
+                <div className="d-flex gap-4">
                   <motion.a
                     href="https://www.linkedin.com/in/kishore-k-25b131288"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-secondary fs-5"
-                    whileHover={{ color: "#198754", y: -3 }}
+                    aria-label="LinkedIn"
+                    style={{ color: "#FFFFFF", fontSize: "20px" }}
+                    whileHover={{ color: "#00E5FF", y: -3 }}
                   >
-                    <i className="fa-brands fa-linkedin-in"></i>
+                    <i className="fa-brands fa-linkedin-in" />
                   </motion.a>
 
                   <motion.a
                     href="https://github.com/Kishore1803"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-secondary fs-5"
-                    whileHover={{ color: "#198754", y: -3 }}
+                    aria-label="GitHub"
+                    style={{ color: "#FFFFFF", fontSize: "20px" }}
+                    whileHover={{ color: "#A78BFA", y: -3 }}
                   >
-                    <i className="fa-brands fa-github"></i>
+                    <i className="fa-brands fa-github" />
                   </motion.a>
 
                   <motion.a
                     href="https://wa.me/919600825271"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-secondary fs-5"
-                    whileHover={{ color: "#198754", y: -3 }}
+                    aria-label="WhatsApp"
+                    style={{ color: "#FFFFFF", fontSize: "20px" }}
+                    whileHover={{ color: "#38F8C1", y: -3 }}
                   >
-                    <i className="fa-brands fa-whatsapp"></i>
+                    <i className="fa-brands fa-whatsapp" />
                   </motion.a>
                 </div>
               </div>
             </div>
           </motion.div>
 
-          {/* Contact Form */}
+          {/* Contact Form — backend logic unchanged */}
           <motion.div
             className="col-lg-7"
             initial={{ opacity: 0, x: 35 }}
@@ -211,18 +263,32 @@ function Contact() {
           >
             <form
               onSubmit={handleSubmit}
-              className="border border-secondary border-opacity-25 rounded-4 p-4 p-md-5"
+              className="rounded-4 p-4 p-md-5"
+              style={{ background: "transparent" }}
             >
               <div className="row g-3">
                 {/* Name */}
                 <div className="col-md-6">
-                  <label className="text-secondary mb-2 small">Your Name</label>
+                  <label
+                    htmlFor="contact-name"
+                    className="mb-2 small"
+                    style={{ color: "#FFFFFF" }}
+                  >
+                    Your Name
+                  </label>
+
                   <input
+                    id="contact-name"
                     type="text"
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="form-control bg-dark text-white border-secondary shadow-none"
+                    className="form-control text-white shadow-none"
+                    style={{
+                      background: "transparent",
+                      color: "white",
+                      border: "1px solid rgba(255,255,255,0.25)",
+                    }}
                     placeholder="Enter your name"
                     required
                   />
@@ -230,15 +296,25 @@ function Contact() {
 
                 {/* Email */}
                 <div className="col-md-6">
-                  <label className="text-secondary mb-2 small">
+                  <label
+                    htmlFor="contact-email"
+                    className="mb-2 small"
+                    style={{ color: "#FFFFFF" }}
+                  >
                     Your Email
                   </label>
+
                   <input
+                    id="contact-email"
                     type="email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="form-control bg-dark text-white border-secondary shadow-none"
+                    className="form-control text-white shadow-none"
+                    style={{
+                      background: "rgba(10,15,30,0.35)",
+                      border: "1px solid rgba(255,255,255,0.25)",
+                    }}
                     placeholder="Enter your email"
                     required
                   />
@@ -246,13 +322,25 @@ function Contact() {
 
                 {/* Subject */}
                 <div className="col-12">
-                  <label className="text-secondary mb-2 small">Subject</label>
+                  <label
+                    htmlFor="contact-subject"
+                    className="mb-2 small"
+                    style={{ color: "#FFFFFF" }}
+                  >
+                    Subject
+                  </label>
+
                   <input
+                    id="contact-subject"
                     type="text"
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
-                    className="form-control bg-dark text-white border-secondary shadow-none"
+                    className="form-control text-white shadow-none"
+                    style={{
+                      background: "rgba(10,15,30,0.35)",
+                      border: "1px solid rgba(255,255,255,0.25)",
+                    }}
                     placeholder="What is this about?"
                     required
                   />
@@ -260,37 +348,53 @@ function Contact() {
 
                 {/* Message */}
                 <div className="col-12">
-                  <label className="text-secondary mb-2 small">Message</label>
+                  <label
+                    htmlFor="contact-message"
+                    className="mb-2 small"
+                    style={{ color: "#FFFFFF" }}
+                  >
+                    Message
+                  </label>
+
                   <textarea
+                    id="contact-message"
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
-                    className="form-control bg-dark text-white border-secondary shadow-none"
+                    className="form-control text-white shadow-none"
                     rows="5"
                     placeholder="Write your message..."
                     required
-                    style={{ resize: "none" }}
-                  ></textarea>
+                    style={{
+                      resize: "none",
+                      background: "rgba(10,15,30,0.35)",
+                      border: "1px solid rgba(255,255,255,0.25)",
+                    }}
+                  />
                 </div>
 
-                {/* Button */}
+                {/* Submit Button */}
                 <div className="col-12">
                   <motion.button
                     type="submit"
                     disabled={loading}
-                    className="btn btn-success rounded-pill px-4 py-2 mt-2"
+                    className="btn rounded-pill px-4 py-2 mt-2 text-dark fw-semibold"
+                    style={{
+                      background: "linear-gradient(90deg, #00E5FF, #A78BFA)",
+                      border: "none",
+                    }}
                     whileHover={!loading ? { scale: 1.03 } : {}}
                     whileTap={!loading ? { scale: 0.97 } : {}}
                   >
                     {loading ? (
                       <>
-                        <span className="spinner-border spinner-border-sm me-2"></span>
+                        <span className="spinner-border spinner-border-sm me-2" />
                         Sending...
                       </>
                     ) : (
                       <>
                         Send Message
-                        <i className="fa-solid fa-arrow-right ms-2"></i>
+                        <i className="fa-solid fa-arrow-right ms-2" />
                       </>
                     )}
                   </motion.button>
@@ -304,6 +408,7 @@ function Contact() {
                     }`}
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
+                    role="status"
                   >
                     {status.message}
                   </motion.div>
