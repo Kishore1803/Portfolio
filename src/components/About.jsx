@@ -7,7 +7,6 @@ function About() {
       id="About"
       className="py-5 min-vh-100 bg-black text-white d-flex align-items-center"
     >
-      
       <div className="container py-5">
         <motion.div
           className="mb-3"
@@ -60,10 +59,7 @@ function About() {
 
             <h3
               className="fw-bold mt-2 mb-3"
-              style={{
-                fontSize: "clamp(26px, 3vw, 40px)",
-                letterSpacing: "-1px",
-              }}
+              style={{ fontSize: "clamp(26px, 3vw, 40px)" }}
             >
               I create modern web
               <br />
@@ -72,7 +68,12 @@ function About() {
 
             <p
               className="text-secondary mb-3"
-              style={{ fontSize: "15px", lineHeight: "1.7", maxWidth: "850px", textAlign: "justify" }}
+              style={{
+                fontSize: "15px",
+                lineHeight: "1.7",
+                maxWidth: "850px",
+                textAlign: "justify",
+              }}
             >
               Hi, I'm <span className="text-white fw-semibold">Kishore K</span>,
               a passionate Frontend Developer and Java Full Stack Developer. I
@@ -83,11 +84,16 @@ function About() {
 
             <p
               className="text-secondary mb-3"
-              style={{ fontSize: "15px", lineHeight: "1.7", maxWidth: "850px", textAlign: "justify" }}
+              style={{
+                fontSize: "15px",
+                lineHeight: "1.7",
+                maxWidth: "850px",
+                textAlign: "justify",
+              }}
             >
               I have worked on projects such as{" "}
               <span className="text-white">
-                Make My Tour, DM Health and Wealth ,Elite Icecreams
+                Make My Tour, DM Health and Wealth, Elite Icecreams
               </span>{" "}
               and focusing on responsive interfaces, usability and practical
               functionality.
@@ -95,7 +101,12 @@ function About() {
 
             <p
               className="text-secondary mb-4"
-              style={{ fontSize: "15px", lineHeight: "1.7", maxWidth: "850px", textAlign: "justify"}}
+              style={{
+                fontSize: "15px",
+                lineHeight: "1.7",
+                maxWidth: "850px",
+                textAlign: "justify",
+              }}
             >
               I believe good software should be simple, reliable and easy to
               use. I continuously learn new technologies and look forward to

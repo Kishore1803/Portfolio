@@ -9,7 +9,6 @@ const experiences = [
     duration: "July 2026 - October 2026",
     points: [
       "Developed responsive web applications using HTML, CSS, Bootstrap, JavaScript, React.js, Spring Boot, and MySQL.",
-      "Designed and integrated RESTful APIs to enable seamless communication between frontend and backend applications.",
       "Built reusable UI components and implemented CRUD operations following the Controller–Service–Repository architecture.",
       "Collaborated with the development team using Git and GitHub, while testing, debugging, and optimizing application performance.",
     ],
@@ -24,7 +23,6 @@ const experiences = [
       "Built responsive and user-friendly web interfaces using HTML, CSS, JavaScript, and Bootstrap, ensuring consistent layouts and smooth user experiences across desktops, tablets, and mobile devices.",
       "Developed reusable and maintainable UI components using React.js, following a clean component-based structure to improve code organization, scalability, and overall application usability.",
       "Integrated RESTful APIs with frontend applications and collaborated with backend developers to connect services, handle dynamic data.",
-      "Improved application performance, usability, and cross-browser compatibility by optimizing UI components, resolving frontend issues, and ensuring consistent functionality across different browsers and screen sizes.",
     ],
   },
   {
@@ -37,7 +35,6 @@ const experiences = [
       "Gained practical exposure to electronics manufacturing processes and day-to-day production operations, developing an understanding of assembly procedures, production workflows, and standard manufacturing practices.",
       "Assisted in monitoring production processes and quality control activities, ensuring products and operations followed defined manufacturing procedures, quality requirements, and established production standards.",
       "Collaborated with cross-functional teams to understand end-to-end manufacturing workflows, coordinate operational activities, and gain practical knowledge of workplace procedures and production management.",
-      "Developed a strong understanding of continuous improvement practices, workplace safety procedures, quality standards, and process efficiency while observing real-world manufacturing and operational environments.",
     ],
   },
 ];

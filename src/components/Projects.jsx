@@ -178,7 +178,11 @@ function Projects() {
 
                   <p
                     className="text-secondary mb-3"
-                    style={{ fontSize: "12px", lineHeight: "1.5", textAlign: "justify" }}
+                    style={{
+                      fontSize: "12px",
+                      lineHeight: "1.5",
+                      textAlign: "justify",
+                    }}
                   >
                     {project.description}
                   </p>

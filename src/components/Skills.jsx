@@ -44,7 +44,7 @@ function Skills() {
   return (
     <section
       id="Skill"
-      className="mt-5 min-vh-100 bg-black text-white d-flex align-items-center"
+      className="mt -5 min-vh-100 bg-black text-white d-flex align-items-center mb-0"
     >
       <div className="container py-5">
         <motion.div
@@ -55,7 +55,7 @@ function Skills() {
           transition={{ duration: 0.6 }}
         >
           <h2
-            className="fw-bold mt-2 mb-2"
+            className="fw-bold mt-2"
             style={{
               fontSize: "clamp(36px, 4vw, 52px)",
               letterSpacing: "-2px",
