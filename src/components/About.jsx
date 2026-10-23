@@ -43,14 +43,13 @@ function About() {
   return (
     <section
       id="About"
-      className="position-relative py-5 text-white overflow-hidden"
+      className="position-relative text-white overflow-hidden"
       style={{
         minHeight: "100vh",
         scrollMarginTop: "85px",
         background: "transparent",
       }}
     >
-
       {/* Transparent section: decorative glows only */}
       <motion.div
         className="position-absolute pe-none"
@@ -82,39 +81,25 @@ function About() {
         transition={{ duration: 8, repeat: Infinity }}
       />
 
-      <div className="container position-relative py-4 py-lg-5">
+      <div className="container">
         {/* Heading */}
         <motion.div
-          className="mb-5"
-          initial={{ opacity: 0, y: 25 }}
+          className="mb-5 mt-5"
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.65 }}
+          transition={{ duration: 0.7 }}
         >
           <div
-            className="d-inline-flex align-items-center gap-2 rounded-pill px-3 py-2 mb-3"
-            style={{
-              color: cyan,
-              background: "transparent",
-              border: "1px solid rgba(0, 217, 255, 0.65)",
-              boxShadow: "0 0 16px rgba(0, 217, 255, 0.14)",
-              fontSize: "11px",
-              fontWeight: 700,
-              letterSpacing: "2px",
-            }}
+            className="d-flex align-items-center gap-2 mb-3"
+            style={{ color: "#00E5FF" }}
           >
-            <motion.span
-              className="rounded-circle"
-              style={{
-                width: 7,
-                height: 7,
-                background: cyan,
-                boxShadow: `0 0 12px ${cyan}`,
-              }}
-              animate={{ opacity: [1, 0.35, 1] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-            />
-            ABOUT ME
+            <span
+              className="fw-bold text-uppercase"
+              style={{ fontSize: "12px", letterSpacing: "4px" }}
+            >
+              About Me
+            </span>
           </div>
 
           <h2
@@ -267,7 +252,6 @@ function About() {
                   textShadow: "0 0 12px rgba(0, 217, 255, 0.35)",
                 }}
               >
-                <span style={{ color: purple }}>//</span>
                 WHO I AM
               </div>
 
@@ -281,15 +265,7 @@ function About() {
                   textShadow: "0 3px 12px rgba(0, 0, 0, 0.95)",
                 }}
               >
-                I create modern web experiences that{" "}
-                <span
-                  style={{
-                    color: cyan,
-                    textShadow: "0 0 18px rgba(0, 217, 255, 0.45)",
-                  }}
-                >
-                  matter.
-                </span>
+                I create modern web experiences that <span>matter</span>
               </h3>
 
               <p

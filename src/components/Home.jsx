@@ -130,35 +130,6 @@ function Home() {
               ease: [0.22, 1, 0.36, 1],
             }}
           >
-            {/* Developer badge */}
-            <motion.div
-              className="d-inline-flex align-items-center gap-2 rounded-pill px-3 py-2 mb-4"
-              style={{
-                color: colors.cyan,
-                background: "rgba(5, 15, 35, 0.75)",
-                border: "1px solid rgba(0, 217, 255, 0.35)",
-                fontSize: "12px",
-                letterSpacing: "0.7px",
-                backdropFilter: "blur(10px)",
-              }}
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-            >
-              <motion.span
-                className="rounded-circle"
-                style={{
-                  width: "7px",
-                  height: "7px",
-                  background: colors.cyan,
-                  boxShadow: "0 0 12px rgba(0, 217, 255, 0.9)",
-                }}
-                animate={{ opacity: [1, 0.4, 1] }}
-                transition={{ duration: 1.8, repeat: Infinity }}
-              />
-              SOFTWARE DEVELOPER
-            </motion.div>
-
             {/* Greeting */}
             <motion.p
               className="mb-2"
