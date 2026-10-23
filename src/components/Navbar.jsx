@@ -39,8 +39,7 @@ function Navbar() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
       style={{
-        background: "rgba(5, 10, 25, 0.42)",
-        backdropFilter: "blur(18px)",
+        backdropFilter: "blur(10px)",
         WebkitBackdropFilter: "blur(18px)",
         borderBottom: "1px solid rgba(0, 217, 255, 0.15)",
         width: "100%",

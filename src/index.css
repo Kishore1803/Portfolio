@@ -2,7 +2,31 @@ html {
   scroll-behavior: smooth;
   width: 100%;
   max-width: 100%;
+  min-height: 100%;
   overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #00e5ff #080d20;
+}
+
+html::-webkit-scrollbar-track {
+  background: #080d20;
+  border-left: 1px solid rgba(0, 229, 255, 0.12);
+}
+
+html::-webkit-scrollbar-track {
+  background: #080d20;
+  border-left: 1px solid rgba(0, 229, 255, 0.12);
+}
+
+html::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00e5ff 0%, #8b5cf6 55%, #c084fc 100%);
+  border-radius: 10px;
+  border: 2px solid #080d20;
+  box-shadow: 0 0 8px rgba(0, 229, 255, 0.35);
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #67f5ff 0%, #a78bfa 55%, #ff75d8 100%);
 }
 
 body {
@@ -23,13 +47,31 @@ body {
   -ms-overflow-style: none;
 }
 
+/* Dark overlay for better text readability */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(3, 5, 20, 0.55);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Hide scrollbar without disabling scrolling */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Root container */
 #root {
   min-height: 100vh;
   width: 100%;
   max-width: 100%;
+  overflow-x: clip;
 }
 
-/* Keep the existing background visible through all sections */
+/* Keep the background image visible through all sections */
 section {
   background-color: transparent;
   background-image: none;
@@ -37,7 +79,7 @@ section {
 
 /* Contact form placeholder styling */
 #Contact .form-control::placeholder {
-  color: white;
+  color: #ffffff;
   opacity: 1;
   font-size: 13px;
   letter-spacing: 0.3px;
